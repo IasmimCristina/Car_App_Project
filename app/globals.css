@@ -17,7 +17,7 @@ body {
     )
     rgb(var(--background-start-rgb));
   background-color: rgb(255, 207, 207);
-  height: 100vh;
+  height: 100%;
 }
 
 /* Dark version not used FOR NOW */
@@ -94,8 +94,10 @@ body {
 }
 
 .hero__image-overlay {
-  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4  bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+color: red !important; /* Cor de fundo vermelha */
 }
+
 /* END: Hero styles */
 
 /* START: Home styles */
