@@ -93,10 +93,7 @@ body {
   @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
 }
 
-.hero__image-overlay {
-  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4  bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
-color: red !important; /* Cor de fundo vermelha */
-}
+
 
 /* END: Hero styles */
 

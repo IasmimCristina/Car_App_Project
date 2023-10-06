@@ -28,7 +28,7 @@ const handleScroll  = () => {}
         <div className="hero__image">
           <Image src="/hero.png" alt='Hero' fill className='object-contain'/>
 
-         <div className='hero__image-overlay'/>
+        
         </div>
       </div>
       </div>
