@@ -8,15 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-/* Dark version not used FOR NOW */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,7 +16,23 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  background-color: rgb(255, 207, 207);
+  height: 100vh;
 }
+
+/* Dark version not used FOR NOW */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+     --foreground-rgb: 255, 255, 255; 
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 5, 5, 5;
+  }
+  body {
+    color: #f1f1f1;
+    background-color: rgb(146, 70, 70);
+  }
+} */
+
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
@@ -75,7 +82,7 @@ body {
 }
 
 .hero__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-5;
+  @apply text-[24px] opacity-75  italic font-light mt-5;
 }
 
 .hero__image-container {
