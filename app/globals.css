@@ -7,16 +7,16 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
+/* ADD a custom scroll if possible!! */
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(24, 19, 19);
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  background-color: rgb(255, 207, 207);
+  background-color: rgb(253, 199, 181);
   height: 100%;
 }
 
@@ -28,8 +28,8 @@ body {
     --background-end-rgb: 5, 5, 5;
   }
   body {
-    color: #f1f1f1;
-    background-color: rgb(146, 70, 70);
+    color: #ffe3e3;
+    background-color: rgb(146, 78, 55);
   }
 } */
 
