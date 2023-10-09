@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Central Carros',
-  description: 'Pesquise os melhores carros do mundo',
+  description: 'Pesquise os melhores carros do mundo!',
 }
 
 export default function RootLayout({

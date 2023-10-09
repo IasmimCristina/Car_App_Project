@@ -68,8 +68,41 @@ body {
 }
 
 .custom-btn {
-  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none hover:bg-orange-700 transition delay-150 duration-100 ease-in-out font-bold;
 }
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+/* Estilo do polegar (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+  background-color: #F97316; /* Cor do polegar */
+  border-radius: 6px; /* Arredonda as bordas do polegar */
+  border: solid 2px #FDCCBC;
+}
+
+/* Estilo quando o mouse está sobre a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  transition: all .3s;
+  background-color: #C2410C; /* Cor do polegar quando o mouse passa por cima */
+}
+
+/* Estilo da barra de rolagem de fundo */
+::-webkit-scrollbar-track {
+ background-color: #FEE3DA;
+}
+
+/* Estilo quando o polegar está pressionado (clicado) */
+::-webkit-scrollbar-thumb:active {
+  background-color: #852c08; /* Cor do polegar quando pressionado */
+}
+
+
+
+
 /* END: General styles */
 
 /* START: Hero styles */
