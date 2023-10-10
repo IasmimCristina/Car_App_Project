@@ -33,7 +33,7 @@ const Navbar = () => {
 
 
   const headerClass = ` fixed top-0 w-full  z-10 ${isSticky ? "sticky-custom" : ""}`;
-  const imageClass = `${isSticky ? "w-20" : "object-contain"}`;
+  const imageClass = `${isSticky ? "w-16" : "object-contain"}`;
 
 
   return (
@@ -46,24 +46,24 @@ const Navbar = () => {
           <Image
             src={"/logocustom.png"}
             alt="Central Carros Logo"
-            width={118}
+            width={80}
             height={18}
 
             className={imageClass}></Image>
 
 
         </Link>
-        <div className=" flex gap-5">
+        <div className=" flex gap-2">
           <CustomButton
-            title="Cadastre-se"
+            title="Cadastrar"
             btnType="button"
-            containerStyles="text-yellow-950 rounded-full bg-orange-200 min-w-[130px]"
+            containerStyles="text-yellow-950 rounded-full bg-orange-200 h-10 min-w-[130px]"
           ></CustomButton>
 
           <CustomButton
             title="Entrar"
             btnType="button"
-            containerStyles="bg-orange-800  text-white rounded-full min-w-[130px]"
+            containerStyles="bg-orange-800  text-white rounded-full p-0 h-10"
           ></CustomButton>
 
         </div>

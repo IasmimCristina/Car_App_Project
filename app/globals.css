@@ -7,7 +7,6 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-/* ADD a custom scroll if possible!! */
 body {
   color: rgb(24, 19, 19);
   background: linear-gradient(
@@ -19,8 +18,6 @@ body {
   background-color: rgb(255, 233, 226);
   height: 100%;
 }
-
-
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
@@ -57,7 +54,7 @@ body {
 }
 
 .custom-btn {
-  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none hover:bg-orange-500 transition delay-150 duration-100 ease-in-out font-bold;
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none hover:bg-orange-500 transition delay-150 duration-300 ease-in-out font-bold;
 }
 
 /* Estilo da barra de rolagem */
@@ -140,8 +137,7 @@ body {
 /* START: navbar details */
 .sticky-custom {
   transition: all 0.3s ease-in-out;
-  
-  
+
   background-color: rgba(10, 5, 0, 0.8);
 
   /* Adjust the background color and opacity as needed */
@@ -229,6 +225,9 @@ body {
   @apply flex flex-col text-black-100  mt-5 border-t border-gray-100;
 }
 
+footer .footer-link:hover {
+  transition: all .3s ease-in-out;
+}
 .footer__links-container {
   @apply flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10;
 }
@@ -286,21 +285,3 @@ body {
 }
 /* END: search manufacturer styles */
 
-
-/* Dark version not used FOR NOW */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 5, 5, 5;
-  }
-  body {
-    color: #ffe3e3;
-    background-color: rgb(53, 22, 12);
-  }
-
-  .sticky-custom {
-    background-color: rgba(27, 1, 1, 0.5);
-  }
-
-} */
