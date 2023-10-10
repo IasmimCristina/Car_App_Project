@@ -16,22 +16,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  background-color: rgb(253, 199, 181);
+  background-color: rgb(255, 233, 226);
   height: 100%;
 }
 
-/* Dark version not used FOR NOW */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-     --foreground-rgb: 255, 255, 255; 
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 5, 5, 5;
-  }
-  body {
-    color: #ffe3e3;
-    background-color: rgb(146, 78, 55);
-  }
-} */
+
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
@@ -68,7 +57,7 @@ body {
 }
 
 .custom-btn {
-  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none hover:bg-orange-700 transition delay-150 duration-100 ease-in-out font-bold;
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none hover:bg-orange-500 transition delay-150 duration-100 ease-in-out font-bold;
 }
 
 /* Estilo da barra de rolagem */
@@ -78,30 +67,27 @@ body {
 
 /* Estilo do polegar (a parte que você arrasta) */
 ::-webkit-scrollbar-thumb {
-  background-color: #F97316; /* Cor do polegar */
+  background-color: #292524; /* Cor do polegar */
   border-radius: 6px; /* Arredonda as bordas do polegar */
-  border: solid 2px #FDCCBC;
+  border: solid 2px rgb(255, 233, 226);
 }
 
 /* Estilo quando o mouse está sobre a barra de rolagem */
 ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
-  transition: all .3s;
-  background-color: #C2410C; /* Cor do polegar quando o mouse passa por cima */
+  transition: all 0.3s;
+  background-color: #c2410c; /* Cor do polegar quando o mouse passa por cima */
 }
 
 /* Estilo da barra de rolagem de fundo */
 ::-webkit-scrollbar-track {
- background-color: #FEE3DA;
+  background-color: rgb(255, 233, 226);
 }
 
 /* Estilo quando o polegar está pressionado (clicado) */
 ::-webkit-scrollbar-thumb:active {
   background-color: #852c08; /* Cor do polegar quando pressionado */
 }
-
-
-
 
 /* END: General styles */
 
@@ -125,8 +111,6 @@ body {
 .hero__image {
   @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
 }
-
-
 
 /* END: Hero styles */
 
@@ -152,6 +136,23 @@ body {
   @apply mt-16 flex justify-center items-center flex-col gap-2;
 }
 /* END: Home styles */
+
+/* START: navbar details */
+.sticky-custom {
+  transition: all 0.3s ease-in-out;
+  
+  
+  background-color: rgba(10, 5, 0, 0.8);
+
+  /* Adjust the background color and opacity as needed */
+  backdrop-filter: blur(12px); /* Adjust the blur amount as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* END: navbar details */
 
 /* START: Car Card styles */
 .car-card {
@@ -284,3 +285,22 @@ body {
   @apply cursor-default select-none py-2 pl-10 pr-4;
 }
 /* END: search manufacturer styles */
+
+
+/* Dark version not used FOR NOW */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 5, 5, 5;
+  }
+  body {
+    color: #ffe3e3;
+    background-color: rgb(53, 22, 12);
+  }
+
+  .sticky-custom {
+    background-color: rgba(27, 1, 1, 0.5);
+  }
+
+} */
