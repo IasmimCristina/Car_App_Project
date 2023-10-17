@@ -16,16 +16,16 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
   //     .replace(/\s+/g, "")
   //     .includes(query.toLowerCase().replace(/\s+/g, ""))
   // ))
-// Fixed version: the search happens with the initial letter
+  // Fixed version: the search happens with the initial letter
   const filteredManufacturers = query === ""
-  ? manufacturers
-  : manufacturers.filter((item) => item.toLowerCase().startsWith(query.toLowerCase()));
+    ? manufacturers
+    : manufacturers.filter((item) => item.toLowerCase().startsWith(query.toLowerCase()));
 
 
   return (
     <div className='search-manufacturer'>
 
-      <Combobox>
+      <Combobox value={manufacturer} onChange={setManufacturer}>
 
         <div className="relative w-full">
           <Combobox.Button className={'absolute left-[12px] top-[14px]'}>
@@ -55,25 +55,19 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
             afterLeave={() => setQuery('')}
           >
             <Combobox.Options>
-              {filteredManufacturers.length === 0 && query !== "" ? (
-                <Combobox.Option
-                  value={query}
-                  className={"search-manufacturer__option"}
-                >
-                  Crie "{query}"
-                </Combobox.Option>
-              ) : (
+              {
                 filteredManufacturers.map((item) => (
                   <Combobox.Option
                     key={item}
                     className={({ active }) => ` relative search-manufacturer__option ${active ? 'bg-orange-900 text-white' : 'text-orange-900 bg-orange-100'}  `}
                     value={item}
                   >
-                    {/*  */}
+
+                    
                     {item}
                   </Combobox.Option>
                 ))
-              )}
+              }
             </Combobox.Options>
 
           </Transition>

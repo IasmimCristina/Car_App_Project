@@ -10,26 +10,31 @@ const Navbar = () => {
 
   const [isSticky, setIsSticky] = useState(false);
 
+  // Needed to make the second styling for navbar corected
+  useEffect(() => {
+    setIsSticky(window.scrollY > 0);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
-      // Verifica a posição atual de scroll
-      if (window.scrollY > 0) {
-        // Se o scroll for maior que zero, adiciona a classe "sticky"
-        setIsSticky(true);
-      } else {
-        // Caso contrário, remove a classe "sticky"
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY > 0);
     };
 
-    // Adiciona o event listener de scroll ao elemento window
     window.addEventListener("scroll", handleScroll);
 
-    // Remove o event listener quando o componente é desmontado
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Updating local storage
+
+  // Atualize o armazenamento local quando o estado isSticky mudar
+  useEffect(() => {
+    if (isSticky !== null) {
+      localStorage.setItem("isSticky", isSticky.toString());
+    }
+  }, [isSticky]);
 
 
   const headerClass = ` fixed top-0 w-full  z-10 ${isSticky ? "sticky-custom" : ""}`;
@@ -39,37 +44,37 @@ const Navbar = () => {
   return (
     <header className={headerClass}>
       <div className="header-background ">
-      <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 ">
+        <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 ">
 
 
-        <Link href="/" className="flex justify-center items-center">
-          <Image
-            src={"/logocustom.png"}
-            alt="Central Carros Logo"
-            width={80}
-            height={18}
+          <Link href="/" className="flex justify-center items-center">
+            <Image
+              src={"/logocustom.png"}
+              alt="Central Carros Logo"
+              width={80}
+              height={18}
 
-            className={imageClass}></Image>
-
-
-        </Link>
-        <div className=" flex gap-2">
-          <CustomButton
-            title="Cadastrar"
-            btnType="button"
-            containerStyles="text-yellow-950 rounded-full bg-orange-200 h-10 min-w-[130px]"
-          ></CustomButton>
-
-          <CustomButton
-            title="Entrar"
-            btnType="button"
-            containerStyles="bg-orange-800  text-white rounded-full p-0 h-10"
-          ></CustomButton>
-
-        </div>
+              className={imageClass}></Image>
 
 
-      </nav>
+          </Link>
+          <div className=" flex gap-2">
+            <CustomButton
+              title="Cadastrar"
+              btnType="button"
+              containerStyles="text-yellow-950 rounded-full bg-orange-200 h-10 min-w-[130px]"
+            ></CustomButton>
+
+            <CustomButton
+              title="Entrar"
+              btnType="button"
+              containerStyles="bg-orange-800  text-white rounded-full p-0 h-10"
+            ></CustomButton>
+
+          </div>
+
+
+        </nav>
 
       </div>
     </header>
