@@ -15,7 +15,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  background-color: rgb(255, 233, 226);
+  background-color: rgb(255, 246, 243);
   height: 100%;
 }
 
@@ -57,6 +57,8 @@ body {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none hover:bg-orange-500 transition delay-150 duration-300 ease-in-out font-bold;
 }
 
+
+
 /* Estilo da barra de rolagem */
 ::-webkit-scrollbar {
   width: 8px; /* Largura da barra de rolagem */
@@ -78,13 +80,16 @@ body {
 
 /* Estilo da barra de rolagem de fundo */
 ::-webkit-scrollbar-track {
-  background-color: rgb(255, 233, 226);
+  background-color: rgb(255, 246, 243);
+ 
 }
 
 /* Estilo quando o polegar está pressionado (clicado) */
 ::-webkit-scrollbar-thumb:active {
   background-color: #852c08; /* Cor do polegar quando pressionado */
 }
+
+
 
 /* END: General styles */
 
@@ -152,7 +157,7 @@ body {
 
 /* START: Car Card styles */
 .car-card {
-  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
+  @apply flex flex-col p-6 justify-center items-start  bg-orange-50 ease-in duration-300 hover:bg-orange-100 hover:shadow-md rounded-3xl;
 }
 
 .car-card__content {
