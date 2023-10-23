@@ -30,7 +30,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
         <div className="relative w-full">
           <Combobox.Button className={'absolute left-[12px] top-[14px]'}>
             <Image
-              src={"/logocustom.png"}
+              src={"/car-logo.svg"}
               alt='Logomarca Central Carros'
               width={20}
               height={20}
