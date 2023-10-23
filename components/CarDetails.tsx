@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Dialog, Transition } from '@headlessui/react';
 import { CarProps } from '@/types';
 import { Fragment } from 'react';
+import { generateCarImageUrl } from '@/utils';
 
 
 
@@ -18,7 +19,11 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailesProps) => {
 
 
   // Translation array
-  const keyTranslations = {
+  interface KeyTranslations {
+    [key: string]: string;
+  }
+
+  const keyTranslations: KeyTranslations = {
     city_mpg: 'Cidade (MPG)',
     class: 'Classe',
     combination_mpg: 'Combinação (MPG)',
@@ -73,7 +78,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailesProps) => {
 
 
                 <Dialog.Panel
-                  className={"relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white text-left shadow-xsl transition-all flex flex-col gap-5"}
+                  className={"relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-4 text-left shadow-xl transition-all flex flex-col gap-5"}
                 >
                   <button
                     type='button'
@@ -89,7 +94,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailesProps) => {
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg ">
 
-                      <Image src="/hero.png" alt='Modelo de carro' fill priority className='object-contain' />
+                      <Image src={generateCarImageUrl(car)} alt='Modelo de carro' fill priority className='object-contain' />
 
 
                     </div>
@@ -97,21 +102,20 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailesProps) => {
 
                     <div className="flex gap-3">
                       <div className="flex-1 relative w-full h-24 bg-orange-50 rounded-lg">
-                        <Image src="/hero.png" alt='Modelo de carro' fill priority className='object-contain' />
+                        <Image src={generateCarImageUrl(car, '29')} alt='Modelo de carro' fill priority className='object-contain' />
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-orange-50 rounded-lg">
-                        <Image src="/hero.png" alt='Modelo de carro' fill priority className='object-contain' />
+                        <Image src={generateCarImageUrl(car, '33')} alt='Modelo de carro' fill priority className='object-contain' />
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-orange-50 rounded-lg">
-                        <Image src="/hero.png" alt='Modelo de carro' fill priority className='object-contain' />
+                        <Image src={generateCarImageUrl(car, '13')} alt='Modelo de carro' fill priority className='object-contain' />
                       </div>
                     </div>
                   </div>
 
                   <div className="flex-1 flex gap-2 flex-col">
                     <h2 className='font-semibold text-xl capitalize'>
-                      {car.make}
-                      {car.model}
+                      {car.make} {car.model.charAt(0).toUpperCase() + car.model.slice(1)}
                     </h2>
 
                     <div className="mt-3 flex flex-wrap gap-4">

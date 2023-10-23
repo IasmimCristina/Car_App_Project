@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image';
 import { CarProps } from '@/types';
 import { CarDetails, CustomButton } from '.';
-import { calculateCarRent } from '@/utils';
+import { calculateCarRent, generateCarImageUrl } from '@/utils';
 // Retire as propriedades que voce nao usará se necessário!!
 interface CarCardProps {
   car: CarProps
@@ -36,7 +36,7 @@ const CarCard = ({ car }: CarCardProps) => {
       </p>
 
       <div className="relative w-full h-40  my-3 object-contain">
-        <Image src="/hero.png" alt='Modelo de carro' fill priority className='object-contain' />
+        <Image src={generateCarImageUrl(car)} alt='Modelo de carro' fill priority className='object-contain' />
       </div>
 
 
