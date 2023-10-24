@@ -78,12 +78,12 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailesProps) => {
 
 
                 <Dialog.Panel
-                  className={"relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-4 text-left shadow-xl transition-all flex flex-col gap-5"}
+                  className={"relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-4 text-left shadow-xl transition-all flex flex-col gap-5  dark:bg-zinc-800 dark:text-orange-50"}
                 >
                   <button
                     type='button'
                     onClick={closeModal}
-                    className='absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full'
+                    className='absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full dark:bg-orange-700'
                   >
 
                     <Image src={"/close.svg"} alt='close' width={20} height={20} className='object-contain' />
@@ -101,13 +101,13 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailesProps) => {
 
 
                     <div className="flex gap-3">
-                      <div className="flex-1 relative w-full h-24 bg-orange-50 rounded-lg">
+                      <div className="flex-1 relative w-full h-24 bg-orange-50 rounded-lg dark:bg-zinc-500">
                         <Image src={generateCarImageUrl(car, '29')} alt='Modelo de carro' fill priority className='object-contain' />
                       </div>
-                      <div className="flex-1 relative w-full h-24 bg-orange-50 rounded-lg">
+                      <div className="flex-1 relative w-full h-24 bg-orange-50 rounded-lg dark:bg-zinc-500">
                         <Image src={generateCarImageUrl(car, '33')} alt='Modelo de carro' fill priority className='object-contain' />
                       </div>
-                      <div className="flex-1 relative w-full h-24 bg-orange-50 rounded-lg">
+                      <div className="flex-1 relative w-full h-24 bg-orange-50 rounded-lg dark:bg-zinc-500">
                         <Image src={generateCarImageUrl(car, '13')} alt='Modelo de carro' fill priority className='object-contain' />
                       </div>
                     </div>
@@ -123,10 +123,10 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailesProps) => {
                       {/* Getting the key as the title for the dialog */}
                       {Object.entries(car).map(([key, value]) => (
                         <div className="flex justify-between gap-5 w-full text-right" key={key}>
-                          <h4 className='text-grey capitalize'>
+                          <h4 className='text-grey  dark:text-orange-100 capitalize'>
                             {keyTranslations[key] || key}
                           </h4>
-                          <p className='text-black-100 font-semibold'>{value}</p>
+                          <p className='text-black-100 dark:text-orange-200 font-semibold'>{value}</p>
                         </div>
                       ))}
 

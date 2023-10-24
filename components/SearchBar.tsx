@@ -9,7 +9,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
 
   <button type="submit" className={`-m-l-3 z-10 ${otherClasses}`}>
 
-    <Image src="/magnifying-glass.svg" alt="Ícone de busca" width={40} height={40} className="object-contain"
+    <Image src="/magnifying-glass.svg" alt="Ícone de busca" width={40} height={40} className="object-contain "
     />
   </button>
 )
@@ -52,9 +52,9 @@ const SearchBar = () => {
 
 
   return (
-    <form className='searchbar' onSubmit={handleSearch}>
+    <form className='searchbar  ' onSubmit={handleSearch}>
 
-      <div className="searchbar__item">
+      <div className="searchbar__item  ">
         <SearchManufacturer
           manufacturer={manufacturer}
           setManufacturer={setManufacturer}

@@ -22,16 +22,18 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
     router.push(newPathName, { scroll: false })
   }
   return (
-    <div className="w-fit">
+    <div className="w-fit dark-list ">
       <Listbox
         value={selected}
+       
         onChange={(e) => {
           setSelected(e);
           handleUpdateParams({ type: "string", value: e.value });
+
         }}
       >
        
-        <div className="relative w-fit z-10">
+        <div className="relative w-fit z-10 ">
           <Listbox.Button className={"custom-filter__btn"}>
             <span className='block truncate'>{selected.title}</span>
             <Image src={"/chevron-up-down.svg"} width={20} height={20} className={"ml-4 object-contain"} alt='Seta cima e baixo' />
@@ -47,7 +49,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
             >
               {options.map((option) => (
                 // Getting active from the component
-                <Listbox.Option key={option.title} value={option} className={({ active }) => `relative cursor-default select-none py-2 px-4 ${active ? "bg-orange-400" : 'text-gray-900'}`} >
+                <Listbox.Option key={option.title} value={option} className={({ active }) => ` relative cursor-default select-none py-2 px-4 ${active ? "bg-orange-400" : 'text-gray-900'}`} >
                   {({ selected }) => (
                     <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'} `}>
                       {option.title}

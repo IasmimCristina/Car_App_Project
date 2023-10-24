@@ -19,7 +19,7 @@ const CarCard = ({ car }: CarCardProps) => {
   const carRent = calculateCarRent(city_mpg, year);
 
   return (
-    <div className='car-card group cursor-pointer '>
+    <div className='car-card  bg-orange-50  group cursor-pointer '>
       <div className="car-card__content ">
         <h2 className='car-card__content-title'>{make}  {model}</h2>
       </div>
@@ -35,13 +35,13 @@ const CarCard = ({ car }: CarCardProps) => {
         </span>
       </p>
 
-      <div className="relative w-full h-40  my-3 object-contain">
+      <div className="relative w-full h-40  my-3 object-contain ">
         <Image src={generateCarImageUrl(car)} alt='Modelo de carro' fill priority className='object-contain' />
       </div>
 
 
-      <div className="relative flex w-full mt-2">
-        <div className="flex group-hover:invisible w-full justify-between text-grey">
+      <div className="relative flex w-full mt-2 ">
+        <div className="flex group-hover:invisible w-full justify-between text-grey dark-description">
 
           <div className="flex flex-col justify-center items-center gap-2">
             <Image src="/tire.svg" width={20} height={20} alt='Pneu' />

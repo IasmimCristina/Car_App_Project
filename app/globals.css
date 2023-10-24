@@ -57,8 +57,6 @@ body {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none hover:bg-orange-500 transition delay-150 duration-300 ease-in-out font-bold;
 }
 
-
-
 /* Estilo da barra de rolagem */
 ::-webkit-scrollbar {
   width: 8px; /* Largura da barra de rolagem */
@@ -81,15 +79,12 @@ body {
 /* Estilo da barra de rolagem de fundo */
 ::-webkit-scrollbar-track {
   background-color: rgb(255, 246, 243);
- 
 }
 
 /* Estilo quando o polegar está pressionado (clicado) */
 ::-webkit-scrollbar-thumb:active {
   background-color: #852c08; /* Cor do polegar quando pressionado */
 }
-
-
 
 /* END: General styles */
 
@@ -157,7 +152,10 @@ body {
 
 /* START: Car Card styles */
 .car-card {
-  @apply flex flex-col p-6 justify-center items-start  bg-orange-50 ease-in duration-300 hover:bg-orange-100 hover:shadow-md rounded-3xl;
+  @apply flex flex-col p-6 justify-center items-start  ease-in duration-300  hover:shadow-md rounded-3xl;
+}
+.car-card:hover {
+  background-color: #f7d0c1;
 }
 
 .car-card__content {
@@ -231,7 +229,7 @@ body {
 }
 
 footer .footer-link:hover {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .footer__links-container {
   @apply flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10;
@@ -290,3 +288,94 @@ footer .footer-link:hover {
 }
 /* END: search manufacturer styles */
 
+/* Dark version not updated FOR NOW */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 5, 5, 5;
+  }
+  body {
+    color: #ffe3e3;
+    background-color: rgb(36, 15, 8);
+  }
+
+  .sticky-custom {
+    background-color: rgba(27, 1, 1, 0.5);
+  }
+
+  /* START: footer dark theme */
+
+  footer,
+  footer .footer-end {
+    border-top: 1px solid rgb(41, 37, 36, 0.5);
+  }
+
+  footer h3,
+  footer p,
+  footer .text-base {
+    color: #ffe3e3;
+  }
+  footer .footer-link {
+    color: #ffe3e3;
+    opacity: 0.5;
+  }
+  footer .footer-link:hover {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+  }
+  /* END: footer dark theme */
+
+  /* Estilo do polegar (a parte que você arrasta) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #c2410c; /* Cor do polegar quando o mouse passa por cima */
+    border: solid 2px #270b07;
+  }
+
+  /* Estilo quando o mouse está sobre a barra de rolagem */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #fa682e; /* Cor do polegar quando o mouse passa por cima */
+  }
+
+  /* Estilo da barra de rolagem de fundo */
+  ::-webkit-scrollbar-track {
+    background-color: rgb(36, 15, 8);
+  }
+
+  /* Estilo quando o polegar está pressionado (clicado) */
+  ::-webkit-scrollbar-thumb:active {
+    background-color: #ff4800; /* Cor do polegar quando pressionado */
+  }
+
+  /* Car catalogue dark colors */
+
+  .searchbar {
+    background-color: #292524;
+    @apply rounded-full;
+  }
+
+  .dark-list {
+    background-color: #292524;
+    color: #292524;
+  }
+  .home__text-container {
+    color: #ffe3e3;
+  }
+  .car-card {
+    background-color: #292524;
+  }
+
+  .dark-description {
+    color: #ffe3e379;
+  }
+  .car-card:hover {
+    background-color: #2e160d;
+  }
+  .car-card__btn-container button {
+    background-color: #852c08;
+  }
+
+  .dark-show-more {
+    background-color: #852c08;
+  }
+}
