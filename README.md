@@ -39,6 +39,7 @@ O **Central Carros** é um aplicativo de catálogo de carros que permite explora
 - Informações Detalhadas: Obtenha informações detalhadas sobre cada modelo de carro.
 - Modo Escuro/Claro🌙☀️: O aplicativo se adapta ao modo de aparência do seu sistema.
 
+![Captura de tela do aplicativo](https://github.com/IasmimCristina/Car_App_Project/assets/100351576/254ea994-1d82-4eb1-b87f-143ab68145b1)
 ![Captura de tela do aplicativo](https://github.com/IasmimCristina/Car_App_Project/assets/100351576/5ce997a2-1124-4dc7-bc6c-cfb917e17588)
 ![Captura de tela do aplicativo](https://github.com/IasmimCristina/Car_App_Project/assets/100351576/0458de07-09f3-4065-bf51-decd572abdb4)
 ![Captura de tela do aplicativo](https://github.com/IasmimCristina/Car_App_Project/assets/100351576/3ef4e44c-ca0f-4301-9510-f02b5344a452)
