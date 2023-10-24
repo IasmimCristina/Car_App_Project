@@ -2,9 +2,18 @@ import { CarCard, CustomFilter, Hero, SearchBar } from '@/components'
 import { fetchCars } from '@/utils'
 import Image from 'next/image'
 
-export default async function Home() {
+export default async function Home({searchParams}) {
 
-  const allCars = await fetchCars()
+  const allCars = await fetchCars({
+
+
+    manufacturer: searchParams.manufacturer || '',
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || '',
+    limit: searchParams.limit || 10,
+    model: searchParams.model || ''
+
+  })
   const IsDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
   return (
     <main className="overflow-hidden ">
