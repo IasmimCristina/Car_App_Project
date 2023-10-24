@@ -30,7 +30,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
           handleUpdateParams({ type: "seuTipoAqui", value: e.value });
         }}
       >
-
+        {/* The filters are not working, stopped at 2:50:04*/}
         <div className="relative w-fit z-10">
           <Listbox.Button className={"custom-filter__btn"}>
             <span className='block truncate'>{selected.title}</span>
