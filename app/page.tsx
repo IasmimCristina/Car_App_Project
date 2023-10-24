@@ -36,8 +36,8 @@ export default async function Home({searchParams}) {
           <div className="home__filter-container ">
 
 
-            <CustomFilter title="Combustível" options={fuels} />
-            <CustomFilter title="Ano" options={yearsOfProduction}/>
+            <CustomFilter title="fuel" options={fuels} />
+            <CustomFilter title="year" options={yearsOfProduction}/>
 
           </div>
         </div>
